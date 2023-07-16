@@ -1,0 +1,99 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes reveal-nav {
+    0% {
+        width: 0;
+        height: 0;
+        padding: 0;
+    }
+    60% {
+        width: 400px;
+        height: 0;
+        padding: 0;
+    }
+    80% {
+        width: 400px;
+        height: 0;
+    }
+    100% {
+        width: 600px;
+        height: 50px;
+    }
+}
+@keyframes nav-item {
+    0% {
+        opacity: 0;
+        filter: blur(50px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+@keyframes glitch-fade-in {
+    0% {
+        opacity: 0;
+        filter: blur(50px);
+    }
+    60% {
+        opacity: 0;
+        filter: blur(50px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+@keyframes appear-right {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 50px;
+    }
+}
+@keyframes glitch {
+    0% {
+        opacity: 0;
+    }
+    7% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+    26% {
+        opacity: 1;
+    }
+    28% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    31% {
+        opacity: 1;
+    }
+    32% {
+        opacity: 0;
+    }
+    34% {
+        opacity: 1;
+    }
+    100% {opacity: 1;}
+}
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
