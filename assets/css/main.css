@@ -2,16 +2,24 @@
   font-family: nerd-regular;
   src: url(../../fonts/3270NerdFont-Regular.ttf);
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: #1f1f1f;
   font-family: 'nerd-regular';
   color: #fff;
+  padding: 0;
+  margin: 0;
 }
 .header {
   position: fixed;
   width: 100%;
   height: 75px;
   display: flex;
+  margin: 10px;
+  top: 0;
 }
 .header .logo {
   width: 70px;
@@ -54,12 +62,68 @@ body {
   display: flex;
   padding: 1vh 1vh;
   margin-left: auto;
+  margin-right: 20px;
 }
 .contact-btn button {
   width: 100%;
   height: 100%;
   border-radius: 5vh;
+  padding: 10px;
   color: black;
   font-weight: bold;
   font-weight: 'nerd-regular';
+}
+.status-active {
+  width: 8px;
+  height: 8px;
+  border: 7px solid lightgreen;
+  border-radius: 50%;
+  margin: 1.2vh;
+}
+.contact-content {
+  margin: 1.5vh;
+}
+/* Hero Section */
+.shadow{
+  position: relative;
+  margin: 200px auto 0;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.shadow:before,
+.shadow:after{
+  content:'';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(90deg, #FEAC5E, #C779D0, #004FF9, #FEAC5E);
+  background-size: 200%;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+  border-radius: 50%;
+}
+
+.shadow:after{
+  filter:blur(85px);
+}
+
+@keyframes animate{
+  0%
+  {
+    background-position: 0 0;
+  }
+  50%
+  {
+    background-position: 200% 0;
+  }
+  100%
+  {
+    background-position: 0 0;
+  }
+  
 }
