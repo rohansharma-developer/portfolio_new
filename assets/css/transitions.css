@@ -6,3 +6,38 @@
         opacity: 1;
     }
 }
+@keyframes nav-item {
+    0% {
+        padding: 0;
+        opacity: 0;
+    }
+    80% {
+        padding: 2vh;
+        opacity: 0;
+    }
+    100%{
+        padding: 2vh;
+        opacity: 1;
+    }
+}
+@keyframes font {
+    0% {
+        font-size: 0;
+        opacity: 0;
+    }
+    80% {
+        font-size: 2vh;
+        opacity: 0;
+    }
+    100%{
+        font-size: 2vh;
+        opacity: 1;
+    }
+}
+html.is-changing .transition-fade {
+    transition: opacity 5s;
+    opacity: 1;
+  }
+  html.is-animating .transition-fade {
+    opacity: 0;
+  }

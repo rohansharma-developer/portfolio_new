@@ -40,14 +40,18 @@ body {
   border-radius: 5vh;
   margin:1vh;
   padding: 0.5vh;
+  opacity: 0;
+  animation: 2s forwards appear;
 }
 .navbar .nav-item {
   text-decoration: none;
   color: #fff;
   border-radius: 5vh;
-  padding: 2vh;
   float: left;
   list-style: none;
+  opacity: 0;
+  animation: 1s forwards nav-item;
+  animation-delay: 0.5s;
 }
 .navbar .nav-link:hover .nav-item{
   background-color: #ddd;
@@ -79,21 +83,25 @@ body {
   border: 7px solid lightgreen;
   border-radius: 50%;
   margin: 1.2vh;
+  opacity: 0;
+  animation: 1s forwards appear;
+  animation-delay: 4s;
 }
 .contact-content {
   margin: 1.5vh;
+  font-size: 0;
+  opacity: 0;
+  animation: 2s forwards font;
+  animation-delay: 4s;
 }
 /* Hero Section */
 .shadow{
-  position: relative;
-  margin: 200px auto 0;
+  position: fixed;
+  
   width: 250px;
   height: 250px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  opacity: 0;
-  animation: 3s forwards appear;
-  animation-delay: 2s;
   padding: 1vh;
 }
 
@@ -138,5 +146,33 @@ body {
   backdrop-filter: blur(80px);
   border-radius: 50%;
 }
-
-
+.social {
+  position: fixed;
+  bottom: 2vh;
+  right: 3vh;
+}
+.social-btn {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(255,255,255, 0.2);
+  border-radius: 2vh;
+  list-style: none;
+  float: left;
+  padding: 1.5vh;
+  margin: 1vh;
+}
+.social-btn i {
+  font-size: 3vh; 
+}
+body {
+  --swup-slide-theme-translate: 60px;
+  --swup-slide-theme-duration-fade: .3s;
+  --swup-slide-theme-duration-slide: .4s;
+}
+.test {
+  top: 0;
+  left: 0;
+}
+body {
+  height: 300vh;
+}
