@@ -22,7 +22,7 @@
         <a href="" class="nav-link"><li class="nav-item">Contact</li></a>
       </div>
       </div>
-      <div class="contact-nav">
+      <div class="contact-nav" data-aos="slide-right">
         <div class="status status-active"></div>
         <p class="contact-content">Available to Work</p>
         <a class="contact-btn">
@@ -40,32 +40,19 @@
           <img src="./assets/Untitled design.png" style="width: 100%; transform: scale(0.8);" alt="">
         </div>
       </div>
+      <div id="three-container"></div>
       <div class="social">
+
         <a href=""><li class="social-btn"><i class="fa-brands fa-linkedin-in"></i></li></a>
         <a href=""><li class="social-btn"><i class="fa-brands fa-github"></i></li></a>
         <a href=""><li class="social-btn"><i class="fa-brands fa-codepen"></i></li></a>
       </div>
     </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      gsap.registerPlugin(ScrollTrigger);
-gsap.to(".shadow", {
-  rotation: 360,
-  scale: 0.3,
-  x: -85,
-  y: -85,
-  scrollTrigger: {
-    trigger: ".shadow",
-    start: "top 0",
-    end: "bottom 0",
-    smooth: 1,
-    markers: true,
-    id: "scrub"
-  }
-});
+      AOS.init();
     </script>
-  
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
