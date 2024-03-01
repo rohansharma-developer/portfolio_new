@@ -321,7 +321,7 @@ button {
   transition: all 0.2s ease;
 }
 
-span {
+.hero span {
   width: 100px;
   height: 60px;
   background-color: var(--primaryHi);
@@ -827,4 +827,105 @@ span {
     #window {
       display: none;
     }
+
+  }
+
+  @import url("https://fonts.googleapis.com/css?family=Oswald");
+  .grid-menu {
+    list-style: none;
+    margin-left: -40px;
+  }
+  
+  .gc {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.25em;
+    min-height: 1px;
+    padding-left: 40px;
+    vertical-align: top;
+  }
+  
+  .gc--1-of-3 {
+    width: 32.33333%;
+  }
+  
+  .gc--2-of-3 {
+    width: 66.66666%;
+  }
+  
+  .naccs {
+    position: relative;
+    width: 900px;
+    max-width: 900px;
+    margin: 200px auto 0;
+  }
+  
+  .naccs .nav-menu div {
+    padding: 15px 20px 15px 40px;
+    margin-bottom: 10px;
+    color: #999;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2vh;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    font-weight: 700;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .naccs .nav-menu div:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .naccs .nav-menu div span.light {
+    border: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    border-radius: 2vh;
+    height: 100%;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .naccs .nav-menu div.active span.light {
+    border: 1px solid #fff;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 2vh;
+    top: 0;
+  }
+  
+  .naccs .nav-menu div.active {
+    color: #fff;
+    padding: 15px 20px 15px 20px;
+  }
+  
+  ul.nacc {
+    position: relative;
+    height: 0px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  ul.nacc li {
+    opacity: 0;
+    transform: translateX(50px);
+    position: absolute;
+    list-style: none;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  ul.nacc li.active {
+    transition-delay: 0.3s;
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+  ul.nacc li p {
+    margin: 0;
   }
