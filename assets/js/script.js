@@ -58,7 +58,7 @@ let addKey = (e) => {
         }
         s.innerHTML += String.fromCharCode(kc);
         con++;
-        if (con > 10) { s.innerHTML = ""; con = 0; }
+        if (con >20) { s.innerHTML = ""; con = 0; }
     }
     if (kc == 8) {
         s.innerHTML = "";
