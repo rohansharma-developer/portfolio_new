@@ -982,11 +982,21 @@ nav {
 .projects {
   margin-top: 25vh;
 }
+.projects-title {
+  margin: 10vh 0;
+  text-align: center;
+}
 .project-item {
   max-width: 600px;
   display: flex;
 }
+.project-img {
+  width: 100%;
+}
 .project-item .project-img img {
   width: 100%;
   height: 100%;
+}
+.project-item .project-content{
+  margin-left: 4vh;
 }
