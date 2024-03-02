@@ -25,19 +25,22 @@ body {
 }
 main {
   width: 100%;
+  
 }
 .header {
   position: fixed;
-  width: 100%;
+  width: 95%;
   height: 75px;
   display: flex;
   margin: 10px;
   top: 0;
+  z-index: 9999999999;
 }
 .header .logo {
   width: 70px;
   height: 70px;
   border: 1px solid #fff;
+
   border-radius: 50%;
 }
 .header .logo img {
@@ -117,27 +120,26 @@ main {
   height: 250px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  padding: 1vh;
+  padding: 1.5vh;
 }
 
 .shadow:before,
 .shadow:after{
   content:'';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  background: linear-gradient(90deg,#FEAC5E, #C779D0, #004FF9, #FEAC5E);
-  background-size: 200%;
-  height: calc(100% + 4px);
-  width: calc(100% + 4px);
+  top: -4px;
+  left: -4px;
+  background: linear-gradient(90deg,#FEAC5E, #004FF9, #2ECC40,#FEAC5E);
+  height: calc(100% + 8px);
+  width: calc(100% + 8px);
+  filter: blur(10px);
   z-index: -1;
   animation: animate 20s linear infinite;
   border-radius: 50%;
-  
+  background-size: 200%;
 }
 
 .shadow:after{
-  transform: scale(1.3);
   border-radius: 50%;
 }
 
@@ -160,7 +162,7 @@ main {
   width: 100%;
   height:100%;
   background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(1200px);
+  
   border-radius: 50%;
 }
 .social {
@@ -190,6 +192,12 @@ main {
   --primaryBg: hsla(155, 100%, 65%, 1%);
   --primaryHi: hsla(155, 100%, 75%, 25%);
   --primaryFg: hsl(155, 100%, 85%);
+  --primaryBg2: hsla(209, 100%, 65%, 0.01);
+  --primaryHi2: hsla(214, 100%, 75%, 0.25);
+  --primaryBg3: hsla(34, 100%, 65%, 0.01);
+  --primaryHi3: hsla(46, 100%, 75%, 0.25);
+  --primaryFg3: hsl(56, 100%, 85%);
+  --primaryFg2: hsl(216, 100%, 85%);
   --secondary: hsl(156, 51%, 14%);
   --secondaryFg: hsl(156, 51%, 75%);
   --secondaryBg: hsla(156, 51%, 14%, 5%);
@@ -301,7 +309,7 @@ nav {
   z-index: 9999;
 }
 
-button {
+.hero button {
   height: 50px;
   width: 160px;
   clip-path: path("M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25");
@@ -341,7 +349,7 @@ button {
 }
 
 .button.first {
-  top: 12%;
+  top: 15%;
   right: 20%;
 }
 
@@ -355,8 +363,31 @@ button {
   background-color: var(--accentBg2);
 }
 .button.fourth{
-  top: 15%;
-  left: 10%;
+  top: 25%;
+  left: 15%;
+  background-color: var(--primaryBg2);
+  color: var(--primaryFg2);
+}
+.button.fourth > button {
+  background-color: var(--primaryBg2);
+  box-shadow: 0px -3px 15px 0px var(--primaryHi2) inset;
+    color: var(--primaryFg2);
+}
+.button.fourth > span {
+  background-color: var(--primaryHi2);
+}
+
+.button.first{
+  background-color: var(--primaryBg3);
+  color: var(--primaryFg3);
+}
+.button.first > button {
+  background-color: var(--primaryBg3);
+  box-shadow: 0px -3px 15px 0px var(--primaryHi3) inset;
+    color: var(--primaryFg3);
+}
+.button.first > span {
+  background-color:  var(--primaryHi3);
 }
 .button.fifth{
   top: 40%;
@@ -370,7 +401,7 @@ button {
 
 .button.sec > span {
   background-color: var(--accentHi);
-}c
+}
 
 .button.third {
   bottom: 25%;
@@ -864,7 +895,7 @@ button {
     padding: 15px 20px 15px 40px;
     margin-bottom: 10px;
     color: #999;
-    background: rgba(255,255,255,0.3);
+    
     border-radius: 2vh;
     cursor: pointer;
     position: relative;
@@ -878,23 +909,41 @@ button {
   }
   
   .naccs .nav-menu div span.light {
-    border: 0;
-    left: 0;
-    top: 0;
+
+  clip-path: path("M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25");
+  border: none;
+  border-radius: 13px;
+  background-color: var(--primaryBg);
+  box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
+  color: var(--primaryFg);
+  font-family: "Manrope";
+  font-size: 1rem;
+  position: absolute;
+  transition: all 0.2s ease;
+  }
+.naccs .nav-menu div span.light span {
+    width: 100px;
+    height: 60px;
+    background-color: var(--primaryHi);
+    border-radius: 100%;
+    filter: blur(20px);
     position: absolute;
-    width: 100%;
-    border-radius: 2vh;
-    height: 100%;
-    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    bottom: -50%;
+    transition: all 0.2s ease;
   }
   
   .naccs .nav-menu div.active span.light {
-    border: 1px solid #fff;
+    border: 2px solid rgba(255, 2855, 255, 0.4);
     left: 0;
     height: 100%;
     width: 100%;
     border-radius: 2vh;
     top: 0;
+    box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
+    background-color: var(--primaryBg);
+    clip-path: path("M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25");
+    border: 0; 
+    
   }
   
   .naccs .nav-menu div.active {

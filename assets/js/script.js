@@ -155,7 +155,7 @@ const App = () => {
       this.state = {
         commandHistory: [],
         commandHistoryIndex: 0,
-        fieldHistory: [{ text: 'React Terminal' }, { text: 'Type HELP to see the full list of commands.', hasBuffer: true }],
+        fieldHistory: [{ text: "Welcome to Rohan's Universe!" }, { text: 'Type HELP to see the full list of commands.', hasBuffer: true }],
         userInput: '',
         isMobile: false };
   
@@ -668,7 +668,7 @@ const App = () => {
   
   const Text = ({ input, isCommand, isError, hasBuffer }) => /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
   React.createElement("div", null,
-  isCommand && /*#__PURE__*/React.createElement("div", { id: "query" }, "RT C:\\Users\\Guest>"), /*#__PURE__*/
+  isCommand && /*#__PURE__*/React.createElement("div", { id: "query" }, "/home/rohan/>"), /*#__PURE__*/
   React.createElement("span", { className: "span" }, input)),
   
   hasBuffer && /*#__PURE__*/React.createElement("div", null));
@@ -678,7 +678,7 @@ const App = () => {
   hasBuffer && /*#__PURE__*/React.createElement("div", null));
   
   const UserText = ({ input, theme }) => /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/
-  React.createElement("div", { id: "query" }, "RT C:\\Users\\Guest>"), /*#__PURE__*/
+  React.createElement("div", { id: "query" }, "/home/rohan/>"), /*#__PURE__*/
   React.createElement("span", null, input), /*#__PURE__*/
   React.createElement("div", { id: "cursor", style: theme }));
   
