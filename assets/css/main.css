@@ -977,4 +977,16 @@ nav {
   
   ul.nacc li p {
     margin: 0;
+
   }
+.projects {
+  margin-top: 25vh;
+}
+.project-item {
+  max-width: 600px;
+  display: flex;
+}
+.project-item .project-img img {
+  width: 100%;
+  height: 100%;
+}
