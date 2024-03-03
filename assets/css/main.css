@@ -310,7 +310,7 @@ nav {
   font-weight: bold;
 }
 
-.grid {
+.header .col {
   position: absolute;
   height: 100%;
   weight: 100%;
@@ -321,7 +321,7 @@ nav {
   z-index: -1;
 }
 
-.grid-svg {
+.col-svg {
   height: 80%;
   width: 80%;
   position: relative;
@@ -1176,17 +1176,25 @@ body.light {
   --card-hover-icon-border-color: rgba(24, 24, 27, 0.34);
   --blur-opacity: .1;
 }
-body.toggle .grid * {
+body.toggle .col * {
   transition-duration: 0s !important;
 }
+.row {
+  display: inline-flex;
+}
 
-.grid {
+.col, .col-sm{
   display: grid;
   grid-template-columns: repeat(2, 240px);
   grid-gap: 32px;
   position: relative;
   z-index: 1;
+  margin: 2vh;
 }
+.col-lg {
+  grid-template-columns: 100%;
+}
+
 
 .card {
   background-color: var(--background-color);
@@ -1197,6 +1205,7 @@ body.toggle .grid * {
   position: relative;
   transition: box-shadow 0.25s;
 }
+
 .card::before {
   content: "";
   position: absolute;
@@ -1541,22 +1550,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  font-family: "Inter", Arial;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--background-color);
-  overflow: hidden;
-}
-body:before {
-  content: "";
-  position: absolute;
-  inset: 0 -60% 65% -60%;
-  background-image: radial-gradient(ellipse at top, #10B981 0%, var(--background-color) 50%);
-  opacity: var(--blur-opacity);
-}
+
 body .twitter {
   position: fixed;
   display: block;
@@ -1570,5 +1564,5 @@ body .twitter svg {
 
 }
 .ultimate {
-  margin-top: 20vh;
+  margin: 20vh 5vh;
 }
