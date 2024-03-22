@@ -59,7 +59,7 @@ main {
   backdrop-filter: blur(10px);
   border-radius: 5vh;
   margin:1vh;
-  padding: 0.5vh;
+
   opacity: 0;
   animation: 2s forwards appear;
 }
@@ -1179,6 +1179,9 @@ body.light {
 body.toggle .col * {
   transition-duration: 0s !important;
 }
+main {
+  overflow-x: hidden;
+}
 .row {
   display: inline-flex;
 }
@@ -1194,6 +1197,12 @@ body.toggle .col * {
 .col-lg {
   grid-template-columns: 100%;
 }
+.col-lg .card {
+  padding-left: 10vh;
+  padding-right: 10vh;
+  padding-top: 10vh;
+  text-align: left;
+}
 .col-xl{
   display: block;
   width: 100%;
@@ -1207,11 +1216,12 @@ body.toggle .col * {
 .card {
   background-color: var(--background-color);
   box-shadow: 0px var(--card-box-shadow-1-y) var(--card-box-shadow-1-blur) var(--card-box-shadow-1), 0px var(--card-box-shadow-2-y) var(--card-box-shadow-2-blur) var(--card-box-shadow-2), 0 0 0 1px var(--card-border-color);
-  padding: 56px 16px 16px 16px;
+  padding: 4vh 1vh;
   border-radius: 15px;
   cursor: pointer;
   position: relative;
   transition: box-shadow 0.25s;
+  text-align: center;
 }
 
 .card::before {
@@ -1254,16 +1264,26 @@ body.toggle .col * {
   margin: 12px 0 4px 0;
   font-family: inherit;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 38px;
   line-height: 2;
+  color: var(--card-label-color);
+}
+.card h2 {
+  z-index: 2;
+  position: relative;
+  margin: 12px 0 44px 0;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1;
   color: var(--card-label-color);
 }
 .card p {
   z-index: 2;
   position: relative;
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
+  
   color: var(--text-color);
 }
 .card .shine {

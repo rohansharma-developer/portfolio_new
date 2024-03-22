@@ -80,11 +80,7 @@ let con = 0;
 let base = (e) => {
     let  x = e.pageX / window.innerWidth - 0.5;
     let  y = e.pageY / window.innerHeight - 0.5;
-    k.style.transform = `
-        perspective(10000px)
-        rotateX(${ y * 10  + 60}deg)
-        rotateZ(-${ x * 40  + 35}deg)
-    `;
+
 }
 
 let addKey = (e) => {
